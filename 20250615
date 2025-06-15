@@ -1,0 +1,13 @@
+// "blooper reel" @by eggg
+
+$: s("[ht ht](5,8)?,  lt(3,8), hh*8?  ").bank("linndrum").fast(2).gain(.3)
+
+$: n("<3 2>(3,8),0@2(3,8)?")
+  .scale("g2:mixolydian")
+  .transpose("1,1.01,1.02").sound("triangle,sine").fm(2).fmh(.5)
+.press()
+.delay(.2)
+.someCyclesBy(.2,x=>x.jux(rev))
+
+$: s("flexatone:<1,2,3,4,5,6,7,8>?")
+.speed(-1).chop(8).n(" 0 5 1 4").cut(.02).press().gain(3).ply(" 4? 2 1 ".fast(3))
